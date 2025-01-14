@@ -38,7 +38,8 @@ class ReuleauxPolygonAlignedFix(Scene):
         inner_vertices = polygon_vertices(inner_radius, n)  # Inner polygon vertices
 
         # Create the inner polygon
-        inner_polygon = RegularPolygon(n=n, radius=inner_radius)
+        # inner_polygon = RegularPolygon(n=n, radius=inner_radius)
+        inner_polygon = Polygon(*inner_vertices)
         inner_polygon.set_stroke(width=4, color=WHITE)
 
         # Create Reuleaux-like arcs
@@ -69,7 +70,8 @@ class ReuleauxPolygonAlignedFix(Scene):
             inner_vertices = polygon_vertices(inner_radius, sides)
 
             # Create new shapes
-            new_inner_polygon = RegularPolygon(n=sides, radius=inner_radius)
+            # new_inner_polygon = RegularPolygon(n=sides, radius=inner_radius)
+            new_inner_polygon = Polygon(*inner_vertices)
             new_inner_polygon.set_stroke(width=4, color=WHITE)
 
             # Create new arcs
