@@ -1,6 +1,6 @@
 from manim import *
 from math import cos, sin, tan, radians, pi, sqrt
-import numpy as np
+import numpy as np 
 
 class ReuleauxPolygonAlignedFix(Scene):
     def construct(self):
